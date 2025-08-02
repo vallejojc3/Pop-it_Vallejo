@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pop It</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="body">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">Pop it Vallejo</a>
+
+      <button class="header__burger" id="burger">☰</button>
+
+      <nav class="header__nav" id="nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#" class="menu-toggle" data-target="about-dropdown">SOBRE NOSOTROS</a>
+            <div class="dropdown" id="about-dropdown">
+              <p>Somos una tienda especializada en juguetes sensoriales.</p>
+              <p>Nuestro objetivo es brindar entretenimiento relajante.</p>
+            </div>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="menu-toggle" data-target="discounts-dropdown">DESCUENTOS</a>
+            <div class="dropdown" id="discounts-dropdown">
+              <p>¡10% de descuento en tu primera compra!</p>
+              <p>Ofertas especiales cada semana.</p>
+            </div>
+          </li>
+          <li class="header__menu-item">
+            <a href="#" class="menu-toggle" data-target="contacts-dropdown">CONTACTOS</a>
+            <div class="dropdown" id="contacts-dropdown">
+              <p>Email: juan.cruz12@kodland.team</p>
+              <p>Tel: +57 3225237665</p>
+              <p>Slack: @Juan Vallejo</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero aparecer">
+    <div class="hero__content">
+      <h1 class="hero__title">POP IT!</h1>
+      <p class="hero__subtitle">¡El mejor juguete antiestrés es el plástico de burbujas sin fin!</p>
+      <button class="hero__button">COMPRAR</button>
+    </div>
+    <div class="hero__image">
+      <img src="/imagenes/background.png" alt="Pop It principal" />
+    </div>
+  </section>
+
+  <!-- ¿QUÉ ES POP IT? -->
+  <section class="about aparecer">
+    <div class="about__content">
+      <h2 class="about__title">¿Qué es Pop it?</h2>
+      <p class="about__text">
+        Pop-it se traduce literalmente como "reventarlo". Es un juego de niños, cuyo proceso puede compararse con reventar plástico de burbujas. Pero a diferencia del plástico, el pop-it se puede apretar con las sensaciones y sonidos característicos "infinitamente": docenas de burbujas de silicona simplemente se aprietan en la dirección opuesta.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="products aparecer">
+    <h2 class="products__title">Elige tu Pop-It!</h2>
+    <div class="products__grid">
+      <div class="products__item">
+        <img src="/imagenes/square.png" alt="Pop it cuadrado" />
+        <p>Cuadrado multicolor</p>
+        <button>COMPRAR</button>
+      </div>
+      <div class="products__item">
+        <img src="/imagenes/amongus.png" alt="Among Us Pop it" />
+        <p>Among Us, mármol</p>
+        <button>COMPRAR</button>
+      </div>
+      <div class="products__item">
+        <img src="/imagenes/round.png" alt="Pop it redondo" />
+        <p>Circulo multicolor</p>
+        <button>COMPRAR</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGLAS DEL JUEGO -->
+  <section class="rules aparecer">
+    <div class="rules__container">
+      <div class="rules__text">
+        <h2>Reglas del juego</h2>
+        <p>
+          Los jugadores se turnan para presionar los granos. Es necesario completar la fila que se empezó. Se puede presionar un máximo de 3 granos a la vez (deben estar uno al lado del otro; no se pueden presionar varios a la vez si no están cerca). El objetivo es que el oponente sea el último. ¡El último pierde!
+        </p>
+      </div>
+      <div class="rules__image">
+        <img src="/imagenes/photo.jpg" alt="Niño jugando" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer aparecer">
+    <div class="footer__container">
+      <div class="footer__logo">Pop it Vallejo</div>
+      <div class="footer__links">
+        <a href="#">Métodos de pago</a>
+        <a href="#">Envío</a>
+        <a href="#">Venta al por mayor</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
