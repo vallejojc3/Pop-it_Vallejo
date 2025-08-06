@@ -9,9 +9,43 @@
 /* CUERPO GENERAL */
 /* ============================= */
 body {
-  padding-top: 80px; /* Ajusta si tu header tiene otra altura */
+  padding-top: 80px;
   animation: aparecerBody 0.8s ease-in;
   font-family: sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* ============================= */
+/* ELEMENTOS GENERALES */
+/* ============================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn {
+  background-color: #ffa726;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.btn:hover {
+  background-color: #fb8c00;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
 
 /* ============================= */
@@ -59,6 +93,11 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: color 0.3s;
+}
+
+.header__menu-item a:hover {
+  color: #ffa726;
 }
 
 /* Dropdown */
@@ -74,7 +113,6 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   min-width: 250px;
   z-index: 100;
-  white-space: normal;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -112,6 +150,7 @@ body {
 .hero__content {
   flex: 1 1 400px;
   padding: 1rem;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .hero__title {
@@ -127,32 +166,12 @@ body {
   margin-bottom: 2rem;
 }
 
-.hero__button {
-  background-color: #b2ebf2;
-  color: #000;
-  border: none;
-  padding: 1rem 2rem;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  animation: pulse 2s infinite;
-}
-
-.hero__button:hover {
-  background-color: #4dd0e1;
-}
 
 .hero__image {
   flex: 1 1 300px;
   text-align: center;
   padding: 1rem;
-}
-
-.hero__image img {
-  max-width: 100%;
-  height: auto;
+  animation: fadeInRight 1.2s ease forwards;
 }
 
 /* ============================= */
@@ -162,6 +181,7 @@ body {
   padding: 4rem 2rem;
   background-color: #fff;
   text-align: center;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .about__title {
@@ -184,6 +204,7 @@ body {
   background-color: #b2ebf2;
   padding: 4rem 2rem;
   text-align: center;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .products__title {
@@ -205,17 +226,12 @@ body {
   border-radius: 10px;
   width: 250px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.8s ease;
 }
 
 .products__item:hover {
   transform: scale(1.05);
-}
-
-.products__item img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
 }
 
 .products__item p {
@@ -223,21 +239,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.products__item button {
-  background-color: #ffa726;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  animation: pulse 2s infinite;
-}
-
-.products__item button:hover {
-  background-color: #fb8c00;
-}
 
 /* ============================= */
 /* RULES */
@@ -253,7 +254,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 3rem 2rem;
-  position: relative;
+  animation: fadeInLeft 1s ease forwards;
 }
 
 .rules__container {
@@ -298,6 +299,7 @@ body {
   background-color: #333;
   color: white;
   padding: 2rem;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .footer__container {
@@ -315,56 +317,41 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-}
-
-.footer__links a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer__links a:hover {
-  color: #4dd0e1;
+  text-align: center;
 }
 
 /* ============================= */
-/* ANIMACIONES AL SCROLL */
-/* ============================= */
-.aparecer {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-.aparecer.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ============================= */
-/* ANIMACIONES BOTONES / CLICK */
-/* ============================= */
-button {
-  transition: transform 0.2s, background-color 0.3s;
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
-/* ============================= */
-/* ANIMACIÓN AL CARGAR LA PÁGINA */
+/* ANIMACIONES PERSONALIZADAS */
 /* ============================= */
 @keyframes aparecerBody {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* ANIMACIÓN PULSANTE */
 @keyframes pulse {
   0%   { box-shadow: 0 0 0 0 rgba(255, 167, 38, 0.7); }
   70%  { box-shadow: 0 0 0 10px rgba(255, 167, 38, 0); }
   100% { box-shadow: 0 0 0 0 rgba(255, 167, 38, 0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* ============================= */
@@ -382,30 +369,15 @@ button:active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  .header__nav--active .header__menu {
-    display: flex;
-  }
-
   .header__burger {
     display: block;
   }
 
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .rules__container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .products__grid {
-    flex-direction: column;
-  }
-
+  .hero,
+  .rules__container,
+  .products__grid,
   .footer__container {
+    flex-direction: column;
     text-align: center;
   }
 }
-
