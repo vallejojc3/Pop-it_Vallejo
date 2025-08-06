@@ -28,21 +28,24 @@ img {
 
 .btn {
   background-color: #ffa726;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 0.7rem 1.5rem;
+  padding: 0.8rem 1.8rem;
   font-weight: bold;
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   animation: pulse 2s infinite;
 }
 
 .btn:hover {
   background-color: #fb8c00;
   transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
+
 
 .btn:active {
   transform: scale(0.95);
@@ -357,27 +360,32 @@ img {
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .about,
+  .products,
+  .rules {
+    padding: 2rem 1rem;
+  }
+
+  .products__item {
+    width: 100%;
+  }
+
   .header__menu {
-    display: none;
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 70px;
-    right: 2rem;
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    right: 1rem;
+    top: 60px;
   }
 
-  .header__burger {
-    display: block;
-  }
-
-  .hero,
-  .rules__container,
-  .products__grid,
-  .footer__container {
-    flex-direction: column;
-    text-align: center;
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
   }
 }
