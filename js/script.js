@@ -37,3 +37,16 @@ const observador = new IntersectionObserver(entries => {
 document.querySelectorAll(".aparecer").forEach(el => {
   observador.observe(el);
 });
+
+const botonModoOscuro = document.getElementById("modoOscuroBtn");
+
+  botonModoOscuro.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    
+    // Cambiar ícono del botón
+    if (document.body.classList.contains("dark-mode")) {
+      botonModoOscuro.textContent = "☀️ Modo Claro";
+    } else {
+      botonModoOscuro.textContent = "🌙 Modo Oscuro";
+    }
+  });
